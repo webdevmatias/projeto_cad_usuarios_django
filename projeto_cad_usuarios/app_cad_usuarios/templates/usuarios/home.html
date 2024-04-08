@@ -1,0 +1,12 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<form action="{% url 'listagem_usuarios' %}" method="post" class="text-white align-items-center my-5 w-50 h-auto container d-flex flex-column justify-content-center">
+   {% csrf_token %}
+   <div class="h-auto d-flex flex-column justify-content-center bg-dark py-5 px-3 rounded">
+      <h1 class="mb-5">Cadastro de usuarios:</h1>
+      Nome<input name="nome" class="my-2" type="text">
+      Idade<input name="idade" class="my-2" type="text">
+      <button class="mt-3 bg-primary border-0 rounded text-white">Enviar</button>
+   </div>
+</form>
+{% endblock %}
